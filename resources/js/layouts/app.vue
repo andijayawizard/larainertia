@@ -7,18 +7,33 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <inertia-link class="nav-link" href="/posts/">POSTS</inertia-link>
-              <!-- <a class="nav-link" href="/posts" target="">Posts</a> -->
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://santrikoding.com/ebook" target="_blank">EBOOK</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://santrikoding.com/tutorial-set" target="_blank">TUTORIAL SET</a>
-            </li>
-          </ul>
+                    <ul v-if="auth.user" class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <inertia-link class="nav-link" href="/admin/dashboard">DASHBOARD</inertia-link>
+                        </li>
+                        <li class="nav-item">
+                        <inertia-link class="nav-link" href="/posts/">POSTS</inertia-link>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="https://santrikoding.com/ebook" target="_blank">EBOOK</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="https://santrikoding.com/tutorial-set" target="_blank">TUTORIAL SET</a>
+                        </li>
+                        <li class="nav-item">
+                            <inertia-link class="nav-link" href="/logout" method="POST">LOGOUT</inertia-link>
+                        </li>
+                    </ul>
+                    <ul v-else class="navbar-nav ms-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <inertia-link class="nav-link" href="/login">LOGIN</inertia-link>
+                        </li>
+                        <li class="nav-item">
+                            <inertia-link class="nav-link" href="/register">REGISTER</inertia-link>
+                        </li>
+                    </ul>
+          <!-- <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          </ul> -->
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-success" type="submit">Search</button>
@@ -34,7 +49,16 @@
 </template>
 
 <script>
+    import { Link } from '@inertiajs/inertia-vue3';
   export default {
+        //register Link di component
+        components: {
+            Link
+        },
+
+        props: {
+            auth: Object
+        }
 
   }
 </script>

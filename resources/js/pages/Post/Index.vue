@@ -50,6 +50,7 @@
 
         //props
         props: {
+            auth: Object,
             posts: Array // <- nama props yang dibuat di controller saat parsing data
         },
 
