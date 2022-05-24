@@ -6,7 +6,8 @@
         </div>
         <!-- flash message -->
         <div class="mb-3">
-            <inertia-link href="/posts/create" class="btn btn-md btn-primary">TAMBAH DATA</inertia-link>
+            <!-- <inertia-link href="/posts/create" class="btn btn-md btn-primary">TAMBAH DATA</inertia-link> -->
+              <a class="btn btn-md btn-primary" href="/posts/create" target="">Tambah Data</a>
         </div>
         <div class="card border-0 rounded shadow-sm">
             <div class="card-body">
@@ -24,6 +25,7 @@
                             <td>{{ post.content }}</td>
                             <td class="text-center">
                             <inertia-link :href="`/posts/${post.id}/edit`" class="btn btn-sm btn-primary me-2">EDIT</inertia-link>
+              <!-- <a class="btn btn-sm btn-primary" href="`/posts/${post.id}/edit`" target="">Edit</a> -->
                                                             <button @click.prevent="deletePost(`${post.id}`)" class="btn btn-sm btn-danger">DELETE</button>
 
 </td>
