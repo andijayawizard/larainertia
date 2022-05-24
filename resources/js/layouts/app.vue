@@ -32,8 +32,6 @@
                             <inertia-link class="nav-link" href="/register">REGISTER</inertia-link>
                         </li>
                     </ul>
-          <!-- <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          </ul> -->
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-success" type="submit">Search</button>
