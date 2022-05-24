@@ -74,9 +74,11 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Post $post)
     {
-        //
+        return Inertia::render('Post/Edit', [
+            'post' => $post
+        ]);
     }
 
     /**
@@ -86,9 +88,23 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
-        //
+        //set validation
+        $request->validate([
+            'title'   => 'required',
+            'content' => 'required',
+        ]);
+
+        //update post
+        $post->update([
+            'title'     => $request->title,
+            'content'   => $request->content
+        ]);
+
+        if ($post) {
+            return Redirect::route('posts.index')->with('message', 'Data Berhasil Diupdate!');
+        }
     }
 
     /**
@@ -99,6 +115,14 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //find post by ID
+        $post = Post::findOrfail($id);
+
+        //delete post
+        $post->delete();
+
+        if ($post) {
+            return Redirect::route('posts.index')->with('message', 'Data Berhasil Dihapus!');
+        }
     }
 }
