@@ -9,8 +9,8 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <!-- <inertia-link class="nav-link" href="/posts/">POSTS</inertia-link> -->
-              <a class="nav-link" href="/posts" target="">Posts</a>
+              <inertia-link class="nav-link" href="/posts/">POSTS</inertia-link>
+              <!-- <a class="nav-link" href="/posts" target="">Posts</a> -->
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://santrikoding.com/ebook" target="_blank">EBOOK</a>

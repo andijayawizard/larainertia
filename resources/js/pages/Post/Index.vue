@@ -6,8 +6,8 @@
         </div>
         <!-- flash message -->
         <div class="mb-3">
-            <!-- <inertia-link href="/posts/create" class="btn btn-md btn-primary">TAMBAH DATA</inertia-link> -->
-              <a class="btn btn-md btn-primary" href="/posts/create" target="">Tambah Data</a>
+            <inertia-link href="/posts/create" class="btn btn-md btn-primary">TAMBAH DATA</inertia-link>
+              <!-- <a class="btn btn-md btn-primary" href="/posts/create" target="">Tambah Data</a> -->
         </div>
         <div class="card border-0 rounded shadow-sm">
             <div class="card-body">
