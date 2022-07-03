@@ -40,13 +40,11 @@
 <script>
     //import layout
     import LayoutApp from '../../Layouts/App.vue'
-import paginationVue from '../../components/pagination.vue'
+
     import { Inertia } from '@inertiajs/inertia'
 
     export default {
-components: {
-    paginationVue
-},
+
         //layout
         layout: LayoutApp,
 
