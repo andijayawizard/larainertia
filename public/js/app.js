@@ -21950,11 +21950,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_App_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Layouts/App.vue */ "./resources/js/Layouts/App.vue");
 /* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
 //import layout
+ // import PaginationVue from "../../components/Pagination.vue";
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   //layout
   layout: _Layouts_App_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+  //   components: PaginationVue,
   //props
   props: {
     auth: Object,
@@ -22735,7 +22737,7 @@ var _hoisted_9 = {
   "class": "text-center"
 };
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("EDIT");
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("EDIT ");
 
 var _hoisted_11 = ["onClick"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -22777,12 +22779,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         return $setup.deletePost("".concat(post.id));
       }, ["prevent"]),
       "class": "btn btn-sm btn-danger"
-    }, "DELETE", 8
+    }, " DELETE ", 8
     /* PROPS */
     , _hoisted_11)])]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])])])])]);
+  ))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <pagination :links=\"items.links\" /> ")])])]);
 }
 
 /***/ }),
