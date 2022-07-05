@@ -17,9 +17,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul v-if="auth.user" class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <inertia-link class="nav-link" href="/admin/dashboard"
-                >DASHBOARD</inertia-link
-              >
+              <inertia-link class="nav-link" href="/dashboard">DASHBOARD</inertia-link>
             </li>
             <li class="nav-item">
               <inertia-link class="nav-link" href="/posts/">POSTS</inertia-link>
@@ -73,6 +71,7 @@
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
 import { InertiaProgress } from "@inertiajs/progress";
+
 InertiaProgress.init({
   // The delay after which the progress bar will
   // appear during navigation, in milliseconds.
