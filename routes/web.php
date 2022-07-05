@@ -28,7 +28,9 @@ Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'store']);
 Route::post('/logout', [LoginController::class, 'destroy'])->middleware('auth');
 
-Route::get('/dashboard', DashboardController::class)->middleware('auth');
 
 // Route::get('/', [PostController::class, 'index']);
-Route::resource('posts', PostController::class)->middleware('auth');
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', DashboardController::class);
+    Route::resource('posts', PostController::class);
+});
